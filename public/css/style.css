@@ -1,0 +1,410 @@
+*,*::before,*::after{
+    box-sizing: inherit;
+     margin: 0;
+}
+:root{
+            --border-radius: 3.4px;
+            --color: #1c232d;
+            --color-softwhite: #ece6e4;
+            --color-softerwhite: #f0f2f4;
+            --color-softwhite-hover: #a19c99;
+            
+            --color-buttons: #3276eb;
+            --color-buttons-hover: #507bc5;
+
+            --color-enroll: #1abd55;
+            --color-enroll-light: #49795b;
+            --color-witdraw: tomato;
+
+            --b-color-succes: #d4fbe3;
+            --b-color-succes-hover: #bcddc9;
+
+            --color-error: tomato;
+            --box-shadow: 0 3px 5px 2px rgba(0,0,0,.2);
+
+
+            --transition-b: background-color .2s ease;
+            --transition-c: color .2s ease;
+
+            --brd-style: 1px solid  var(--color-softwhite-hover);
+
+            --mb: .8rem;
+
+        }
+html{
+    box-sizing: border-box;
+    font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--color);
+}
+
+body{
+    margin: 0;
+}
+a{
+    color: var(--color-buttons);
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.error{
+    color: var(--color-error);
+    
+}
+nav{
+    z-index: 100;
+    background-color: var(--color);
+    
+}
+
+nav{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 1rem;
+    height: 75px;
+}
+nav li {
+    list-style-type: none;
+    
+    display: inline-block;
+    margin-right: 1rem;
+
+}
+
+nav a {
+    color: var(--color-softwhite);
+    text-decoration: none;
+    transition: var(--transition-c);
+}
+
+nav a:hover{
+    cursor: pointer;
+    color: var(--color-softwhite-hover);
+}
+
+.current{ 
+    color: var(--color-buttons) !important;
+    border-color: var(--color-buttons) !important;
+}
+
+.currentB{
+    /* color: #1b4181 !important; */
+    background-color: #bdcde9;
+    opacity: 1;
+    
+}
+/** HOME PAGE --------------------------------------------------------------------------- */
+.home{
+    width: 100vw;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0 0;
+}
+
+/** AUTH PAGES --------------------------------------------------------------------------- */
+.form_auth{
+    width: 100%;
+    /* height: 100vh; */
+    display: flex;
+    margin-top: 1rem;
+    justify-content: center;
+}
+.form_auth > section{
+    box-shadow: var(--box-shadow);
+    width:600px;
+    aspect-ratio: 2/1;
+    padding: 1rem;
+}
+
+.form_auth > section > header{
+    margin-bottom: var(--mb);
+}
+
+.bottom-nav{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+    width: fit-content;
+    gap: 1rem;
+}
+input:focus{
+    outline: 1px solid var(--color-buttons);
+}
+
+input:not(input[type="search"]){
+    margin-bottom: .4rem;
+}
+
+input[type="submit"]{
+    width: 10rem;
+    height: 2.2rem;
+    background-color: var(--color-buttons);
+    border: none;
+    color: var(--color-softwhite);
+    font-weight: 700;
+    transition: var(--transition-b);
+    margin-top: .6rem;
+}
+input[type="submit"]:hover{
+    background-color: var(--color-buttons-hover);
+    cursor: pointer;
+}
+
+input[type="checkbox"]:hover{
+    background-color: var(--color-buttons-hover);
+    cursor: pointer;
+}
+
+input:not(input[type="submit"],input[type="checkbox"], input[type="search"]){
+    width: 100%;
+    max-width: 100%;
+    height: 2.5rem;
+    border-radius: var(--border-radius);
+    border: var(--brd-style);
+
+}
+
+label{
+    font-weight: 600;
+}
+
+.welcome{
+    color: var(--color-softwhite-hover);
+}
+
+
+/** COURSES PAGE --------------------------------------------------------------------------- */
+
+.bar{
+    background-color: var(--color-softerwhite);
+    color: var(--color-softwhite-hover);
+    /* width: 1500px; */
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+.bar a{
+    color: var(--color);
+    text-decoration: none;
+    margin-right: .4rem;
+    transition: var(--transition-c);
+}
+.bar a:hover{
+    color: var(--color-buttons-hover);
+}
+.bar > form, .bar > .sorting{
+display: inline-block;
+}
+
+.pagination a{
+    color: var(--color);
+}
+
+input[type="search"]{
+    width: 20rem;
+    height: 2.2rem;
+    border-radius: 500px;
+    border: var(--brd-style);
+    margin: .5rem 0;
+    text-indent: 1rem;
+}
+
+
+
+.courses-container{
+    padding: 0 1rem;
+    display: grid;
+    /* flex-wrap: wrap;
+    justify-content: space-between; */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.course-container{
+    box-shadow: var(--box-shadow);
+    height: 120px;
+    width: 100%;
+    max-width: 1fr;
+    padding: .6rem;
+    display: grid;
+    grid-template-rows: 25% 1fr 30% ;
+    background-color: var(--color-softerwhite);
+}
+
+.pagination{
+    padding: 0 1rem;
+    margin-top: 1rem;
+    height: 1.8rem;
+}
+
+.pagination a{
+    text-decoration: none;
+}
+.pagination div{
+    display: inline-block;
+}
+
+.pagination div > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p-button{
+    border: var(--brd-style);
+    padding: 0 .2rem;
+    display: inline-block;
+    height: 100%;
+    max-height: 100%;
+    width:5rem;
+    border-radius: var(--border-radius);
+    transition: var(--transition-b);
+}
+
+.p-numbers{
+    width: 23px; 
+    display: inline-block;
+    /* text-align: center; */
+    border: var(--brd-style);
+    height: 100%;
+    max-height: 100%;
+    transition: var(--transition-b);
+}
+
+.p-button:hover, .p-numbers:hover{
+    background-color: var(--color-buttons-hover);
+    color: var(--color-softerwhite) !important;
+}
+
+
+.disabled{
+    /* pointer-events DISABLES ALL MOUSE INTERACTIONS ON AN ELEMENT */
+    pointer-events: none; 
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+.course-page-title{
+    padding: 0 1rem;
+}
+
+.no-results{
+    margin: 1.3rem 0 0 1rem ;
+    font-weight: 600;
+}
+
+.view-course{
+    color: var(--color-buttons);
+    text-decoration: none;
+    transition: var(--transition-c);
+}
+.view-course:hover{
+    color: var(--color-buttons-hover);
+}
+
+
+.view-course-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.succes-small{
+    background-color: var(--b-color-succes);
+    border: 1px solid var(--color-enroll);
+    color: var(--color-enroll);
+    font-weight: 600;
+    width: fit-content;
+    height: 100%;
+    max-height: 100%;
+    display: inline-block;
+    border-radius: var(--border-radius);
+    padding: 0 .3rem;
+}
+
+.succes-small span{
+    display: flex;
+    height: 100%;
+    max-height: 100%;
+    align-items: center;
+}
+
+
+
+/** COURSE PAGE --------------------------------------------------------------------------- */
+
+.course-page{
+    margin: 2rem 0 0 2rem ;
+    box-shadow: var(--box-shadow);
+    width: 600px;
+    padding: 1rem;
+}
+
+.enrol{  
+    background-color: var(--color-enroll) !important;
+}
+
+.witdraw{
+    background-color: var(--color-witdraw) !important;
+}
+
+.file-container{
+    margin: .3rem 0;
+    display: flex;
+    /* justify-content: center; */
+    background-color: var(--color-softerwhite);
+    padding: 1rem;
+    gap: .5rem;
+}
+
+.file-container input[type="file"]{
+    display: none;
+}
+
+.file-container input[type="submit"]{
+    margin: 0 !important;
+}
+
+.upload{
+   background-color: var(--b-color-succes);
+    border: 1px solid var(--color-enroll);
+    color: var(--color-enroll);
+    font-weight: 600;
+    padding: 0rem 2rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: var(--transition-b);
+}
+
+.upload:hover{
+    background-color: var(--b-color-succes-hover);
+    color: var(--color-enroll-light);
+}
+
+
+.succes{
+    background-color: var(--b-color-succes);
+    border: 1px solid var(--color-enroll);
+    color: var(--color-enroll);
+    font-weight: 600;
+    width: 50%;
+    height: 50px;
+    margin-top: .8rem;
+    border-radius: var(--border-radius);
+}
+
+
+/** 404 PAGE --------------------------------------------------------------------------- */
+
+.not-found{
+margin-top: 4rem;
+ text-align: center;
+}

@@ -1,0 +1,1 @@
+<a href="/courses?page=1&query=&sort=created_at&order=asc">Back to overview</a>

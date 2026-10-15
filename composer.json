@@ -1,0 +1,11 @@
+{
+    "name": "dev/online_leerplatform",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Core\\": "core/",
+            "Traits\\": "traits/"
+        }
+    },
+    "require": {}
+}
